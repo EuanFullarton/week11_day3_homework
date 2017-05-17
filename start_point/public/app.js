@@ -4,11 +4,11 @@ var app = function(){
     }
 
     var populateList = function(albums){
-      console.log(albums[2].name);
+      console.log(albums[2]);
       var display = document.getElementById('albums');
 
       albums.forEach(function(album){
-        display.innerText +=  "\n" + album.name;
+        display.innerText +=  "\n" + album.name + "\n" + album.artists[0].name + "\n" + "\n";
       });
     }
 
