@@ -6,9 +6,19 @@ var app = function(){
     var populateList = function(albums){
       console.log(albums[2]);
       var display = document.getElementById('albums');
+      var ul = document.querySelector("ul");
+      display.appendChild(ul);
 
       albums.forEach(function(album){
-        display.innerText +=  "\n" + album.name + "\n" + album.artists[0].name + "\n" + "\n";
+        var li = document.createElement('li');
+
+        li.innerHTML +=  
+        album.name + "<br>" + 
+        album.artists[0].name +
+        "<img src=" + album.images[0].url + " />"; 
+        
+        ul.appendChild(li);
+
       });
     }
 
