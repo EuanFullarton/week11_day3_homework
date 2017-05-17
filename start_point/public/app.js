@@ -11,13 +11,14 @@ var app = function(){
 
       albums.forEach(function(album){
         var li = document.createElement('li');
-
+        
         li.innerHTML +=  
         album.name + "<br>" + 
         album.artists[0].name +
         "<img src=" + album.images[0].url + " />"; 
         
         ul.appendChild(li);
+
 
       });
     }
